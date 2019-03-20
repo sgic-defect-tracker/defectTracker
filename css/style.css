@@ -109,4 +109,70 @@
   }
   
   
+  /* Tyrone */
+
+  .lblClass {
+    top: 0;
+    padding-left: 90%;
+  }
   
+  #descriptionTextArea,
+  #commentsTextArea {
+    resize: none;
+  }
+  
+  .container #addDefectHeadLine {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: #4285f4;
+    margin-bottom: 2%;
+  }
+  
+  addHeadCenter {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .butttonAlignRight {
+    float: right;
+  }
+  
+  .btn-clear {
+    color: black;
+  }
+  
+  #textAreaStyle {
+    padding-left: 0.5rem;
+  }
+  
+
+  /* Custom Sidebar */
+  #sidebar,
+  #sidebar-wrapper,
+  #logo {
+    background: url(../assets/img/sidenav4.jpg);
+    background-size: cover;
+  }
+
+.nav-item:hover {
+  background-color: #4285f4!important;
+}
+
+.nav .active {
+  background-color: #4285f4!important;
+  color: #FFF;
+}
+
+.sidebar .nav li a, .sidebar .nav li .dropdown-menu a {
+  color: FFF !important;
+}
+
+#bell {
+  color: #FFF !important;
+}
+
+#md-content {
+  margin-top: 50px !important;
+}
