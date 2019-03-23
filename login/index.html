@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      body {
+        padding: 0%;
+        background: url(Assets/img/ma.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      h1 {
+        color: White;
+        padding-top: 0px;
+      }
+
+      img {
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+    </style>
+  </head>
+
+  <body style="padding-top: 0%; ">
+    <div class="modal-dialog cascading-modal" style="padding-top: 0%">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header light-blue darken-3 white-text">
+          <h4 class="title"><i class="fas fa-pencil-alt"></i> Login Here</h4>
+        </div>
+        <!--Body-->
+        <div class="modal-body mb-0">
+          <div class="md-form mb-5">
+            <i class="fa fa-envelope prefix"></i>
+            <input
+              type="email"
+              id="Form-email1"
+              class="form-control validate"
+            />
+            <label data-error="wrong" data-success="right" for="Form-email1"
+              >Your email / Username</label
+            >
+          </div>
+
+          <div class="md-form pb-3">
+            <i class="fa fa-key prefix"></i>
+            <input
+              type="password"
+              id="Form-pass1"
+              class="form-control validate"
+            />
+            <label data-error="wrong" data-success="right" for="Form-pass1"
+              >Your password **</label
+            >
+            <p class="font-small blue-text d-flex justify-content-end">
+              Forgot <a href="#" class="blue-text ml-1"> Password?</a>
+            </p>
+          </div>
+
+          <div class="text-center mb-3">
+            <button
+              type="button"
+              class="btn blue-gradient btn-block btn-rounded z-depth-1a"
+              onClick="dash()"
+            >
+              Sign in
+            </button>
+          </div>
+          <p
+            class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"
+          >
+            or Sign in with:
+          </p>
+
+          <div class="row my-3 d-flex justify-content-center">
+            <!--Facebook-->
+            <button
+              type="button"
+              class="btn btn-white btn-rounded mr-md-3 z-depth-1a"
+            >
+              <i class="fab fa-github text-center"></i>
+            </button>
+            <!--Twitter-->
+            <button
+              type="button"
+              class="btn btn-white btn-rounded mr-md-3 z-depth-1a"
+            >
+              <i class="fab fa-slack"></i>
+            </button>
+            <!--Google +-->
+            <button type="button" class="btn btn-white btn-rounded z-depth-1a">
+              <i class="fab fa-google-plus-g"></i>
+            </button>
+          </div>
+        </div>
+        <!--Footer-->
+        <div class="modal-footer mx-5 pt-3 mb-1">
+          <p class="font-small grey-text d-flex justify-content-end">
+            Not a member?
+            <a href="register.html" class="blue-text ml-1"> Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function dash() {
+      location.href = "../dashboard.html";
+    }
+  </script>
+  <!-- JQuery -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+  ></script>
+  <!-- Bootstrap tooltips -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+  ></script>
+  <!-- Bootstrap core JavaScript -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+  ></script>
+  <!-- MDB core JavaScript -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"
+  ></script>
+</html>

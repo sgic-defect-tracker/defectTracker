@@ -1,133 +1,234 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design Bootstrap</title>
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet" />
-    <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="mdbselect/getmdl-select.min.css" />
-    <link rel="stylesheet" href="mdbselect/material.min.css" />
-  </head>
 
-  <body>
-    <!-- Start your project here-->
-    <form class="md-form">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 imgUp">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-3 imgUp">
-                  <div class="imagePreview"></div>
-                  <label class="btn btn-primary uploadLabel">
-                    <i class="fas fa-camera"></i>
-                    <input
-                      type="file"
-                      class="uploadFile img"
-                      value="Upload Photo"
-                      style="width: 0px;height: 0px;overflow: hidden;"
-                    />
-                  </label>
-                </div>
-              </div>
-              <!-- row -->
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="md-form profileClass">
-                  <input type="text" id="inputFirstName" class="form-control" />
-                  <label for="inputFirstName">First Name</label>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="md-form profileClass">
-                  <input type="text" id="inputLastName" class="form-control" />
-                  <label for="inputLastName">Last Name</label>
-                </div>
-              </div>
-            <div class="col-md-12">
-                <div class="row butttonAlignRight">
-                    <button class="btn btn-primary">
-                        <i class="fa fa-save"></i> &nbsp; Save
-                    </button>
-                </div>
-            </div>
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
+<head>
+	<title>Profile</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css"
+		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+	<!-- Material Kit CSS -->
+	<link href="assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="css/mdb.min.css" rel="stylesheet">
+	<!-- Your custom styles (optional) -->
+	<link href="css/style.css" rel="stylesheet">
+</head>
 
+<body>
+	<div class="wrapper ">
+		<div id="sidebar" class="sidebar" data-color="" data-background-color="">
+			<!--
+      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+      Tip 2: you can also add an image using data-image tag
+  -->
+			<div class="logo" id="logo">
+				<a href="#" class="simple-text logo-normal">
+					Defect Tracker
+				</a>
+				<a href="#" class="simple-text logo-normal">
+					Hi, Username
+				</a>
+			</div>
+			<div class="sidebar-wrapper" id="sidebar-wrapper">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="dashboard.html">
+							<i class="material-icons">dashboard</i>
+							<p>Dashboard</p>
+						</a>
+					</li>
+					<!-- your sidebar here -->
+					<li class="nav-item">
+						<a class="nav-link" href="adddefects.html">
+							<i class="material-icons">bug_report</i>
+							<p>Add Defect</p>
+						</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">
+							<i class="material-icons">account_box</i>
+							<p>Profile</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="main-panel">
+			<!-- Navbar -->
+			<nav class="navbar navbar-expand-lg navbar-absolute fixed-top primary-color">
+				<div class="container-fluid">
+					<div class="navbar-wrapper">
+						<a class="navbar-brand" style="color: #FFF" href="#pablo">
+							<i class="fas fa-user"></i> &nbsp; 
+							Profile
+						</a>
+					</div>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="navbar-toggler-icon icon-bar"></span>
+						<span class="navbar-toggler-icon icon-bar"></span>
+						<span class="navbar-toggler-icon icon-bar"></span>
+					</button>
+					<div class="collapse navbar-collapse justify-content-end">
+						<ul class="navbar-nav">
+							<li class="nav-item dropdown">
+								<a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false">
+									<i id="bell" class="far fa-bell fa-2x"></i>
+									<!-- <i class="material-icons">notifications</i> -->
+									<span class="notification">4</span>
+									<p class="d-lg-none d-md-block">
+										Some Actions
+									</p>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="#">A defect occured in Login Module</a>
+									<a class="dropdown-item" href="#">Notification example</a>
+									<a class="dropdown-item" href="#">Hi, this is a notification</a>
+									<a class="dropdown-item" href="#">Check the defect in your landing page</a>
+								</div>
+							</li>
+							<!-- your navbar here -->
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+			<div class="content">
+				<div class="container-fluid">
+					    <!-- Start your project here-->
     <form class="md-form">
         <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-                    <h4 class="headingPadding"> <span class="badge badge-primary"> Change Password </span></h4>
-                    <div class="col-md-12">
-                        <div class="md-form">
-                            <input type="text" id="inputLastName" class="form-control" />
-                            <label for="inputLastName"> Current Password</label>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="md-form">
-                            <input type="text" id="inputLastName" class="form-control" />
-                            <label for="inputLastName"> New Password</label>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="md-form">
-                            <input type="text" id="inputLastName" class="form-control" />
-                            <label for="inputLastName"> Re-type Password</label>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="row butttonAlignRight">
-                            <button class="btn btn-primary">
-                                <i class="fa fa-save"></i> &nbsp; Save
-                            </button>
-                        </div>
-                    </div>
+          <div class="row">
+            <div class="col-md-3 imgUp">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3 imgUp">
+                    <div class="imagePreview"></div>
+                    <label class="btn btn-primary uploadLabel">
+                      <i class="fas fa-camera"></i>
+                      <input
+                        type="file"
+                        class="uploadFile img"
+                        value="Upload Photo"
+                        style="width: 0px;height: 0px;overflow: hidden;"
+                      />
+                    </label>
+                  </div>
                 </div>
+                <!-- row -->
+              </div>
             </div>
+            <div class="col-md-4">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="md-form profileClass">
+                    <input type="text" id="inputFirstName" class="form-control" />
+                    <label for="inputFirstName">First Name</label>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="md-form profileClass">
+                    <input type="text" id="inputLastName" class="form-control" />
+                    <label for="inputLastName">Last Name</label>
+                  </div>
+                </div>
+              <div class="col-md-12">
+                  <div class="row butttonAlignRight">
+                      <button class="btn btn-primary">
+                          <i class="fa fa-save"></i> &nbsp; Save
+                      </button>
+                  </div>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </form>
+      </form>
+  
+      <form class="md-form">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-7">
+                      <h4 class="headingPadding"> <span class="badge badge-primary"> Change Password </span></h4>
+                      <div class="col-md-12">
+                          <div class="md-form">
+                              <input type="text" id="inputLastName" class="form-control" />
+                              <label for="inputLastName"> Current Password</label>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                          <div class="md-form">
+                              <input type="text" id="inputLastName" class="form-control" />
+                              <label for="inputLastName"> New Password</label>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                          <div class="md-form">
+                              <input type="text" id="inputLastName" class="form-control" />
+                              <label for="inputLastName"> Re-type Password</label>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                          <div class="row butttonAlignRight">
+                              <button class="btn btn-primary">
+                                  <i class="fa fa-save"></i> &nbsp; Save
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </form>
+  
+      <!-- /Start your project here-->
+					
+				</div>
+			</div>
+		</div>
+	</div>
 
-    <!-- /Start your project here-->
+	<!-- SCRIPTS -->
+	<!-- JQuery -->
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="js/mdb.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="js/sidebar.js"></script>
 
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.js"></script>
+	<!--   Core JS Files   -->
+	<script src="assets/js/core/jquery.min.js"></script>
+	<script src="assets/js/core/popper.min.js"></script>
+	<script src="assets/js/core/bootstrap-material-design.min.js"></script>
 
-    <script type="text/javascript" src="js/main.js"></script>
-    <script src="mdbselect/material.min.js"></script>
-    <script src="mdbselect/getmdl-select.min.js"></script>
-  </body>
+	<!--  Notifications Plugin    -->
+	<script src="assets/js/plugins/bootstrap-notify.js"></script>
+	<script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+	<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+	<script src="assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+</body>
+
 </html>

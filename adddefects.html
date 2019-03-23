@@ -58,9 +58,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#0">
+                        <a class="nav-link" href="table.html">
                             <i class="material-icons">account_box</i>
-                            <p>Profile</p>
+                            <p>Viewdefect</p>
                         </a>
                     </li>
                 </ul>
@@ -111,12 +111,12 @@
             <div class="content" id="md-content">
                 <div class="container-fluid">
                     <!-- your content here -->
-                    <form class="md-form" style="color: #757575;">
+                    <form class="md-form" name="defAdd" style="color: #757575;" >
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="md-form">
-                                        <input type="text" id="inputDefectId" class="form-control" readonly="true" />
+                                        <input type="text" id="inputDefectId" class="form-control"  />
                                         <label for="inputDefectId">Defect ID</label>
                                     </div>
                                 </div>
@@ -164,14 +164,13 @@
                                 <div class="col-4">
                                     <div class="md-form">
                                         <label for="descriptionTextArea" id="textAreaStyle">Defect Description</label>
-                                        <textarea class="form-control rounded-0" id="descriptionTextArea"
-                                            rows="3"></textarea>
+                                        <textarea class="form-control rounded-0" id="description" rows="3"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-8">
                                     <div class="md-form">
                                         <label for="descriptionTextArea" id="textAreaStyle">Steps to Re-Create</label>
-                                        <textarea class="form-control rounded-0" id="descriptionTextArea"
+                                        <textarea class="form-control rounded-0" id="stepstorecreate"
                                             rows="3"></textarea>
                                     </div>
                                 </div>
@@ -262,8 +261,8 @@
                                 </div>
                                 <div class="col-sm">
                                     <div class="md-form">
-                                        <input type="text" id="inputAvailavleIn" class="form-control" />
-                                        <label for="inputAvailavleIn">Available In</label>
+                                        <input type="text" id="available" class="form-control" />
+                                        <label for="available">Available In</label>
                                     </div>
                                 </div>
                             </div>
@@ -271,8 +270,8 @@
                             <div class="row">
                                 <div class="col-lg">
                                     <div class="md-form">
-                                        <label for="commentsTextArea" id="textAreaStyle">Comments..</label>
-                                        <textarea class="form-control rounded-0" id="commentsTextArea"
+                                        <label for="commentsTextArea" id="comments">Comments..</label>
+                                        <textarea class="form-control rounded-0" id="comments"
                                             rows="3"></textarea>
                                     </div>
                                 </div>
@@ -282,7 +281,7 @@
                                 <button class="btn btn-clear">
                                     <i class="fas fa-magic mr-1"></i> Clear
                                 </button>
-                                <button class="btn btn-primary">
+                                <button class="btn btn-primary" onClick="addDefect()">
                                     <i class="fa fa-paper-plane"></i> &nbsp; Submit
                                 </button>
                             </div>
@@ -293,7 +292,36 @@
             </div>
         </div>
     </div>
+    </body>
 
+    <script>
+    function addDefect() {
+        var data = JSON.stringify({
+            Defect_ID: document.getElementById("inputDefectId").value,
+            Module: document.getElementById("module").value,
+            Severity: document.getElementById("sample3").value,
+            Description: document.getElementById("description").value,
+            Steps_to_recreate: document.getElementById("stepstorecreate").value,
+            Defect_Type: document.getElementById("defectType").value,
+            Priority: document.getElementById("priority").value,
+            Status: document.getElementById("status").value,
+            Assigned_To: document.getElementById("assignedTo").value,
+            Available_in: document.getElementById("available").value,
+            Comments: document.getElementById("comments").value
+        });
+        
+
+        let xhr = new XMLHttpRequest();
+        console.log(xhr);
+        xhr.open("POST", "http://localhost:3000/defect");
+
+        xhr.setRequestHeader("Content-type", "application/json");
+        console.log(this.responseText);
+        xhr.send(data);
+
+    };
+
+    </script>
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -318,9 +346,16 @@
     <script src="assets/js/core/bootstrap-material-design.min.js"></script>
     <script src="mdbselect/material.min.js"></script>
     <script src="mdbselect/getmdl-select.min.js"></script>
-
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script>
     <!--  Notifications Plugin    -->
     <script src="assets/js/plugins/bootstrap-notify.js"></script>
-</body>
 
 </html>

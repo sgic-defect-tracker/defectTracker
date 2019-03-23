@@ -1,0 +1,44 @@
+{
+  "defect": [
+    {
+      "id": 2,
+      "Defect_ID": "DEF001",
+      "Module": "Login",
+      "Severity": "High",
+      "Description": "Login Form",
+      "Steps_to_recreate": "Step1 : Styling",
+      "Defect_Type": "UI",
+      "Priority": "Medium",
+      "Status": "Opened",
+      "Assigned_To": "hari",
+      "Available_in": "13/03/2019",
+      "Comments": "Form Element - MDBootstrap"
+    },
+    {
+      "Defect_ID": "",
+      "Module": "register",
+      "Severity": "medium",
+      "Description": "register module",
+      "Steps_to_recreate": "",
+      "Defect_Type": "Formation",
+      "Priority": "High",
+      "Status": "opened",
+      "Assigned_To": "mathan",
+      "Available_in": "",
+      "id": 3
+    },
+    {
+      "Defect_ID": "",
+      "Module": "Add Bug",
+      "Severity": "High",
+      "Description": "Add Bug error",
+      "Steps_to_recreate": "",
+      "Defect_Type": "Backend",
+      "Priority": "high",
+      "Status": "reopened",
+      "Assigned_To": "tyron",
+      "Available_in": "",
+      "id": 4
+    }
+  ]
+}
