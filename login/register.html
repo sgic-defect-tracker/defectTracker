@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      .navbar {
+        margin-top: 55px;
+      }
+
+      body {
+        background: url(Assets/img/ma.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      .mdl-dropdown .mdl-menu__container,
+      .mdl-dropdown .mdl-menu__outline,
+      .mdl-dropdown .mdl-menu {
+        width: 100% !important;
+      }
+      .mdl-dropdown::after {
+        content: "arrow_drop_down";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        right: 14px;
+        color: #727272;
+        top: 22px;
+        font-family: "Material Icons";
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: "liga";
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="modal-dialog cascading-modal">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header light-blue darken-3 white-text">
+          <h4 class="title"><i class="fas fa-pencil-alt"></i> Register Here</h4>
+        </div>
+        <!--Body-->
+        <div class="modal-body mb-0">
+          <div class="md-form form-sm">
+            <i class="fas fa-child prefix active"></i>
+            <input type="text" id="firstname" class="form-control" />
+            <label for="form8" class="active">First name</label>
+          </div>
+          <div class="md-form form-sm">
+            <i class="fas fa-child prefix active"></i>
+            <input type="text" id="lastname" class="form-control" />
+            <label for="form8" class="active">Last name</label>
+          </div>
+          <div class="md-form form-sm">
+            <i class="fas fa-user prefix active"></i>
+            <input type="text" id="username" class="form-control" />
+            <label for="form8" class="active">User name</label>
+          </div>
+          <div class="md-form form-sm">
+            <i class="fas fa-key prefix active"></i>
+            <input type="password" id="password" class="form-control" />
+            <label for="form8" class="active">Password</label>
+          </div>
+
+          <div class="md-form form-sm">
+            <i class="fas fa-key prefix active"></i>
+            <input type="password" id="cpassword" class="form-control" />
+            <label for="form9" class="active">Confirm password</label>
+          </div>
+
+          <div class="md-form form-sm">
+            <i class="fas fa-envelope prefix"></i>
+            <input
+              type="search"
+              id="email"
+              class="form-control mdb-autocomplete"
+            />
+
+            <label for="form-autocomplete-2" class="active">E-mail</label>
+          </div>
+
+          <div class="md-form form-sm">
+            <i class="fas fa-universal-access prefix"></i>
+            <input
+              type="search"
+              id="email"
+              class="form-control mdb-autocomplete"
+            />
+
+            <label for="form-autocomplete-2" class="active">
+              Role :: COMBOBOX</label
+            >
+          </div>
+          <div class="text-center mb-3">
+            <button
+              type="button"
+              class="btn blue-gradient btn-block btn-rounded z-depth-1a"
+              onclick="dash()"
+            >
+              Register
+            </button>
+          </div>
+          <!--Footer-->
+          <div class="modal-footer mx-5 pt-3 mb-1">
+            <p class="font-small grey-text d-flex justify-content-end">
+              Back to Sign In
+              <a href="index.html" class="blue-text ml-1"> Sign In</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </body>
+  <script>
+    function dash() {
+      location.href = "../dashboard.html";
+    }
+  </script>
+  <!-- JQuery -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+  ></script>
+  <!-- Bootstrap tooltips -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+  ></script>
+  <!-- Bootstrap core JavaScript -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+  ></script>
+  <!-- MDB core JavaScript -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"
+  ></script>
+  <!--Google API-->
+</html>

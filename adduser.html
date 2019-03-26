@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- style.css import -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Users</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#" id="dd">Create User</a>
+                        <a class="dropdown-item" href="#" id="dd">View Users</a>
+                        <a class="dropdown-item" href="#" id="dd">Delete Users</a>
+                    </div>
+                </li>
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Defect</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="adddefect.html" id="dd">Create a Defect</a>
+                        <a class="dropdown-item" href="viewdefect.html" id="dd">Manage the Defect</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- nav bar end -->
+    <div style="height: 50px;">
+    </div>
+
+    <div class="container">
+
+        <!-- Material form register -->
+        <div class="card">
+
+            <h5 class="card-header info-color white-text text-center py-4">
+                <strong>Create User</strong>
+            </h5>
+
+            <!--Card content-->
+            <div class="card-body px-lg-5 pt-0">
+
+                <!-- Form -->
+                <form class="text-center" style="color: #757575;">
+
+                    <div class="form-row">
+                        <div class="col">
+                            <!-- First name -->
+                            <div class="md-form">
+                                <input type="text" id="materialRegisterFormFirstName" class="form-control">
+                                <label for="materialRegisterFormFirstName">First name</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- Last name -->
+                            <div class="md-form">
+                                <input type="email" id="materialRegisterFormLastName" class="form-control">
+                                <label for="materialRegisterFormLastName">Last name</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="md-form mt-0">
+                        <input type="email" id="materialRegisterFormEmail" class="form-control">
+                        <label for="materialRegisterFormEmail">E-mail</label>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="md-form">
+                        <input type="password" id="materialRegisterFormPassword" class="form-control"
+                            aria-describedby="materialRegisterFormPasswordHelpBlock">
+                        <label for="materialRegisterFormPassword">Password</label>
+                        <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                            At least 8 characters and 1 digit
+                        </small>
+                    </div>
+
+                    <!-- Phone number -->
+                    <div>
+                        <select class="mdb-select md-form mb-4 initialized" id="select">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="materialRegisterFormNewsletter">
+                        <label class="form-check-label" for="materialRegisterFormNewsletter">Subscribe to our
+                            newsletter</label>
+                    </div>
+
+                    <!-- Sign up button -->
+                    <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0"
+                        type="submit">Sign in</button>
+
+
+
+                    <hr>
+
+                    <!-- Terms of service -->
+                    <p>By clicking
+                        <em>Sign up</em> you agree to our
+                        <a href="" target="_blank">terms of service</a>
+
+                </form>
+                <!-- Form -->
+
+            </div>
+
+        </div>
+        <!-- Material form register -->
+
+    </div>
+
+    <!-- Ajax Part Start-->
+    <script>
+
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://localhost:3000/defect', true);
+
+        console.log('sefa')
+        xhr.onload = function () {
+            //  const getval = { Priority };
+            if (this.status == 200) {
+                let details = JSON.parse(this.responseText);
+                // var details = JSON.parse(getval.responseText.map(rs => {
+                //     `${rs.Priority}`
+                // }));
+                var output = '';
+
+                for (var i in details) {
+                    output += '<tr>' +
+                        '<td scope="row">' + details[i].id + '</td>' +
+                        '<td>' + details[i].Defect_ID + '</td>' +
+                        '<td>' + details[i].Module + '</td>' +
+                        '<td>' + details[i].Description + '</td>' +
+                        '<td>' + details[i].Steps_to_recreate + '</td>' +
+                        '<td>' + details[i].Severity + '</td>' +
+                        '<td>' + details[i].Priority + '</td>' +
+                        '<td>' + details[i].Defect_Type + '</td>' +
+                        '<td>' + details[i].Entered_By + '</td>' +
+                        '<td>' + details[i].Entered_Date + '</td>' +
+                        '<td>' + details[i].Status + '</td>' +
+                        '<td>' + details[i].Assigned_To + '</td>' +
+                        '<td>' + details[i].Fixed_By + '</td>' +
+                        '<td>' + details[i].Fixed_Date + '</td>' +
+                        '<td>' + details[i].Available_in + '</td>' +
+                        '<td>' + details[i].Comments + '</td>' +
+                        '</tr>';
+                }
+
+                // let x = details[0].Priority;
+                // console.log(xhr);
+                // console.log(details);
+                // console.log(x);
+                //   var output = deta;
+
+                //  output += '<td>' + details.Defect_ID + '</td>';
+
+
+                document.getElementById('getresult').innerHTML = output;
+            }
+            else {
+                console.log('not connected');
+            }
+        }
+        xhr.send();
+
+
+
+    </script>
+
+    <!-- Ajax Part End-->
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.5/js/mdb.min.js"></script>
+</body>
+
+</html>

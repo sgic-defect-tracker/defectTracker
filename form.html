@@ -46,7 +46,7 @@
                 class="form-control"
                 readonly="true"
               />
-              <label for="inputDefectId">Defect ID</label>
+              <label for="01">Defect ID</label>
             </div>
           </div>
 
@@ -58,7 +58,7 @@
                 <input
                   class="mdl-textfield__input"
                   type="text"
-                  id="module"
+                  id="02"
                   value="Select Module"
                   readonly
                   tabIndex="-1"
@@ -89,7 +89,7 @@
                 <input
                   class="mdl-textfield__input"
                   type="text"
-                  id="sample3"
+                  id="03"
                   value="Select Severity"
                   readonly
                   tabIndex="-1"
@@ -121,7 +121,7 @@
               >
               <textarea
                 class="form-control rounded-0"
-                id="descriptionTextArea"
+                id="04"
                 rows="3"
               ></textarea>
             </div>
@@ -133,7 +133,7 @@
               >
               <textarea
                 class="form-control rounded-0"
-                id="descriptionTextArea"
+                id="04"
                 rows="3"
               ></textarea>
             </div>
@@ -149,7 +149,7 @@
                 <input
                   class="mdl-textfield__input"
                   type="text"
-                  id="defectType"
+                  id="05"
                   value="Select Defect Type"
                   readonly
                   tabIndex="-1"
@@ -181,7 +181,7 @@
                 <input
                   class="mdl-textfield__input"
                   type="text"
-                  id="priority"
+                  id="06"
                   value="Select Priority"
                   readonly
                   tabIndex="-1"
@@ -212,7 +212,7 @@
                 <input
                   class="mdl-textfield__input"
                   type="text"
-                  id="status"
+                  id="07"
                   value="Select Status"
                   readonly
                   tabIndex="-1"
@@ -249,7 +249,7 @@
                 <input
                   class="mdl-textfield__input"
                   type="text"
-                  id="assignedTo"
+                  id="08"
                   value="Select Assigned Person"
                   readonly
                   tabIndex="-1"
@@ -287,7 +287,7 @@
               >
               <textarea
                 class="form-control rounded-0"
-                id="commentsTextArea"
+                id="09"
                 rows="3"
               ></textarea>
             </div>
@@ -298,7 +298,7 @@
           <button class="btn btn-clear">
             <i class="fas fa-magic mr-1"></i> Clear
           </button>
-          <button class="btn btn-primary">
+          <button class="btn btn-primary" onclick="addDefect()">
             <i class="fa fa-paper-plane"></i> &nbsp; Submit
           </button>
         </div>
@@ -323,7 +323,35 @@
         </div> 
       </div>
     </div>-->
+<script>
+  function addDefect() {
+    alert("working");
+    var data = JSON.stringify({
+      Defect_ID: document.getElementById("01").value,
+      Module: document.getElementById("02").value,
+      Severity: document.getElementById("03").value,
+      Description: document.getElementById("04").value,
+      Steps_to_recreate: document.getElementById("05").value,
+      Defect_Type: document.getElementById("06").value,
+      Priority: document.getElementById("07").value,
+      Status: document.getElementById("08").value,
+      Assigned_To: document.getElementById("09").value,
+      Available_in: document.getElementById("10").value,
+      Comments: document.getElementById("11").value
+    });
 
+
+    let xhr = new XMLHttpRequest();
+    console.log(xhr);
+    xhr.open("POST", "http://localhost:3000/defect");
+
+    xhr.setRequestHeader("Content-type", "application/json");
+    console.log(this.responseText);
+    xhr.send(data);
+
+  }
+
+</script>
     <!-- /Start your project here-->
 
     <!-- SCRIPTS -->
